@@ -1,0 +1,13 @@
+{
+  "domain": "solaire_intelligence",
+  "name": "Solaire Intelligence",
+  "codeowners": ["@merv-gif"],
+  "config_flow": true,
+  "documentation": "https://github.com/solaire-intelligence/ha-solaire-intelligence",
+  "integration_type": "hub",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/solaire-intelligence/ha-solaire-intelligence/issues",
+  "loggers": ["custom_components.solaire_intelligence"],
+  "requirements": ["paho-mqtt==2.1.0"],
+  "version": "0.1.0"
+}

@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Solaire Intelligence",
+        "description": "Create an integration key in the SI portal ({key_url}) and paste it here. The key decides which plants Home Assistant sees and whether it may control them — you can revoke it there at any time.",
+        "data": { "api_key": "Integration key" },
+        "data_description": { "api_key": "Starts with si_ha_" }
+      },
+      "reauth_confirm": {
+        "title": "Solaire Intelligence key no longer valid",
+        "description": "The integration key was revoked or the account behind it lost access. Create a new key in the SI portal ({key_url}) and paste it here.",
+        "data": { "api_key": "Integration key" }
+      }
+    },
+    "error": {
+      "not_a_key": "That is not an SI integration key — it should start with si_ha_.",
+      "invalid_auth": "That key was not accepted. It may have been revoked.",
+      "cannot_connect": "Could not reach Solaire Intelligence. Check this Home Assistant's internet connection and try again."
+    },
+    "abort": {
+      "already_configured": "This key is already set up.",
+      "reauth_successful": "Key updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Connection",
+        "description": "Use WebSocket (port 9001) only if your network blocks outbound port 8883.",
+        "data": { "transport": "Connect using" }
+      }
+    }
+  },
+  "selector": {
+    "transport": {
+      "options": {
+        "tcp": "MQTT over TLS (port 8883) — recommended",
+        "websockets": "MQTT over secure WebSocket (port 9001)"
+      }
+    }
+  }
+}
